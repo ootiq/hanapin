@@ -20,7 +20,7 @@ class DuckDuckGo(Hanapin):
             try:
                 # append each search result
                 res.append(
-                    {"title": i.find("a")["href"], "link": i.find("a").get_text()}
+                    {"title": i.find("a").get_text(), "link": i.find("a")["href"]}
                 )
             except Exception:
                 # do nothing if failed above
