@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hanapin
+Version: 0.1.0
+Summary: Simple web search library
+Home-page: https://github.com/TheBoringDude/hanapin
+Author: TheBoringDUde
+Author-email: iamcoderx@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/TheBoringDude/hanapin/issues
+Description: # hanapin
+        Simple web search library
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
