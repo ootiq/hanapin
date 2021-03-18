@@ -1,8 +1,0 @@
-README.md
-pyproject.toml
-setup.cfg
-setup.py
-hanapin/hanapin_theboringdude.egg-info/PKG-INFO
-hanapin/hanapin_theboringdude.egg-info/SOURCES.txt
-hanapin/hanapin_theboringdude.egg-info/dependency_links.txt
-hanapin/hanapin_theboringdude.egg-info/top_level.txt
