@@ -5,7 +5,7 @@ README = (pathlib.Path(__file__).parent / "README.md").read_text()
 
 setup(
     name="hanapin",
-    version="0.1.4",
+    version="0.1.5",
     description="Simple web search library",
     long_description=README,
     long_description_content_type="text/markdown",
