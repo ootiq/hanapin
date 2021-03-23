@@ -6,11 +6,11 @@ import urllib.parse as urlparser
 
 class Hanapin:
     UAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
-    search_engine = ""
+    search_engine = ""  # (override on subclass)
 
     def __init__(self, query: str, count: int = 10):
-        self.query = query
-        self.count = count
+        self.query = query  # search query
+        self.count = count  # results count
         self._soup = self.__init_request()
 
     def __init_request(self) -> BeautifulSoup:

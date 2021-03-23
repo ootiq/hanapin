@@ -8,7 +8,7 @@ class DuckDuckGo(Hanapin):
 
     search_engine = "https://html.duckduckgo.com/html/?q={query}"
 
-    def __init__(self, query):
+    def __init__(self, query: int):
         super().__init__(query)
 
     def results(self) -> list:
