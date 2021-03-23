@@ -6,10 +6,10 @@ class Google(Hanapin):
     Google search
     """
 
-    search_engine = "https://www.google.com/search?q={query}"
+    search_engine = "https://www.google.com/search?q={query}&num={count}"
 
-    def __init__(self, query):
-        super().__init__(query)
+    def __init__(self, query: str, count: int = 10):
+        super().__init__(query, count)
 
     def results(self) -> list:
         res = []

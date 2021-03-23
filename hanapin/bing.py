@@ -6,10 +6,10 @@ class Bing(Hanapin):
     Bing search
     """
 
-    search_engine = "https://www.bing.com/search?q={query}"
+    search_engine = "https://www.bing.com/search?q={query}&count={count}"
 
-    def __init__(self, query):
-        super().__init__(query)
+    def __init__(self, query: str, count: int = 10):
+        super().__init__(query, count)
 
     def results(self) -> dict:
         res = []
