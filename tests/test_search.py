@@ -1,6 +1,6 @@
 import unittest
 
-from hanapin import Google, Bing, DuckDuckGo
+from hanapin import Google, Bing, DuckDuckGo, Ask
 
 
 class TestSearch(unittest.TestCase):
@@ -16,14 +16,20 @@ class TestSearch(unittest.TestCase):
         ddg = DuckDuckGo("Duckduckgo")
         self.assertTrue(len(ddg.results()) > 0, "DuckDuckGo OK")
 
+    def test_ask(self):
+        ask = Ask("Duckduckgo")
+        self.assertTrue(len(ask.results()) > 0, "Ask OK")
+
     def test_no_results(self):
         g = Google("alksdjlakjsdklajsdkljasd")
         b = Bing("alksdjlakjsdklajsdkljasd")
         d = DuckDuckGo("alksdjlakjsdklajsdkljasd")
+        a = Ask("alksdjlakjsdklajsdkljasd")
 
         self.assertTrue(len(g.results()) == 0, "No results >> Google")
         self.assertTrue(len(b.results()) == 0, "No results >> Bing")
         self.assertTrue(len(d.results()) == 0, "No results >> DuckDuckGo")
+        self.assertTrue(len(a.results()) == 0, "No results >> Ask")
 
 
 if __name__ == "__main__":

@@ -33,6 +33,14 @@ from hanapin import DuckDuckGo
 search = DuckDuckGo(query="hello")
 ```
 
+### Ask.com
+```python3
+from hanapin import Ask
+
+# explicitly setting search results count is not applicable,
+search = Ask(query="hello")
+```
+
 ### Get search results
 Scraped search results are `only` the first ones the can be seen from the search engine's results.
 - Search results are accesible from the class object's `.results()` function.
@@ -41,5 +49,10 @@ for i in search.results():
     print(i["title"], "::", i["link"])
 ```
 
-
+## Credits
+### Libraries Used
+- BeautifulSoup4
+- requests
+- lxml
+  
 ### &copy; TheBoringDude | [MIT License](https://github.com/TheBoringDude/hanapin/blob/main/LICENSE)
