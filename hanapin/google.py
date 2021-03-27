@@ -13,6 +13,10 @@ class Google(Hanapin):
         super().__init__(query, count)
 
     def results(self) -> list:
+        """
+        Google.com search resuts
+        """
+
         res = []
 
         for i in self._soup.find_all("div", class_="g"):
@@ -20,7 +24,7 @@ class Google(Hanapin):
                 # append each search result
                 res.append(
                     {
-                        "title": self.get_result_title(i),
+                        "title": self.__get_result_title(i),
                         "link": i.find("a")["href"],
                     }
                 )
@@ -30,7 +34,7 @@ class Google(Hanapin):
 
         return res
 
-    def get_result_title(self, result: BeautifulSoup) -> str:
+    def __get_result_title(self, result: BeautifulSoup) -> str:
         # search result could be a video which gets a different title,
         # solution is really clumsy, but it works and eliminates unnecessary titles
 

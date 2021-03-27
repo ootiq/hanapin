@@ -12,6 +12,10 @@ class Bing(Hanapin):
         super().__init__(query, count)
 
     def results(self) -> dict:
+        """
+        Bing.com search resuts
+        """
+
         res = []
 
         for i in self._soup.find_all("li", class_="b_algo"):

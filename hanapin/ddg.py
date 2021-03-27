@@ -12,6 +12,10 @@ class DuckDuckGo(Hanapin):
         super().__init__(query)
 
     def results(self) -> list:
+        """
+        DuckDuckGo.com search resuts
+        """
+
         res = []
 
         for i in self._soup.find_all(

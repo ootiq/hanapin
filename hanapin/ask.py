@@ -12,6 +12,10 @@ class Ask(Hanapin):
         super().__init__(query)
 
     def results(self) -> dict:
+        """
+        Ask.com search resuts
+        """
+
         res = []
 
         for i in self._soup.find_all("div", class_="PartialSearchResults-item"):
