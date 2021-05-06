@@ -34,7 +34,11 @@ class Hanapin:
         # return soup
         return BeautifulSoup(r.text, "lxml")  # lxml is faster,
 
-    def results(self) -> dict:
+    def __get_results(self):
+        pass
+
+    @property
+    def results(self) -> list:
         """
         Get search results (override this method in subclass)
         """

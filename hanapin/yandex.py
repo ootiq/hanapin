@@ -14,14 +14,18 @@ class Yandex(Hanapin):
     def __init__(self, query: str):
         super().__init__(query)
 
+        self._results = self.__get_results()
+
+    @property
     def results(self) -> list:
+        return self._results
+
+    def __get_results(self) -> list:
         """
         Yandex.com search resuts
         """
 
         res = []
-
-        print(self._soup)
 
         for i in self._soup.find_all("li", class_="serp-item"):
             try:

@@ -12,7 +12,13 @@ class Google(Hanapin):
     def __init__(self, query: str, count: int = 10):
         super().__init__(query, count)
 
+        self._results = self.__get_results()
+
+    @property
     def results(self) -> list:
+        return self._results
+
+    def __get_results(self) -> list:
         """
         Google.com search resuts
         """

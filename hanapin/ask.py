@@ -11,7 +11,13 @@ class Ask(Hanapin):
     def __init__(self, query: str):
         super().__init__(query)
 
-    def results(self) -> dict:
+        self._results = self.__get_results()
+
+    @property
+    def results(self) -> list:
+        return self._results
+
+    def __get_results(self) -> list:
         """
         Ask.com search resuts
         """

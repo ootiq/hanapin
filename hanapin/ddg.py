@@ -11,7 +11,13 @@ class DuckDuckGo(Hanapin):
     def __init__(self, query: int):
         super().__init__(query)
 
+        self._results = self.__get_results()
+
+    @property
     def results(self) -> list:
+        return self._results
+
+    def __get_results(self) -> list:
         """
         DuckDuckGo.com search resuts
         """
